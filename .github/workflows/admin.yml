@@ -44,9 +44,8 @@ jobs:
         with:
           name: dist
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
+      - name: Display structure of downloaded files
+        run: ls -R
 
       - name: Deploy artifact to Cloudflare
         uses: cloudflare/wrangler-action@v3
